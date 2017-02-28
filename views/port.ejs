@@ -1,10 +1,10 @@
 <%- include('header') %>
 <div class="eight wide column">
-    RFID数据（需刷新浏览器）：<%- msg %>
+    获取RFID数据（需刷新浏览器）：<%- msg %>
 </div>
 <span>
     <form action="/search" method="GET">
-        <input type="text" name="postId" placeholder="SEARCH" class="search" />
+        <input type="text" name="postId" placeholder="输入RFID数据" class="search" />
     </form>
 </span>
 <%- include('footer') %>
