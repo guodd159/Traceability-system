@@ -52,7 +52,7 @@ router.post('/', checkNotLogin, function(req, res, next) {
       delete user.password;
       req.session.user = user;
       // 跳转到主页
-      res.redirect('/port');
+      res.redirect('/posts');
       // res.render('port' ,{msg:'ssss'})
       //res.render('port' ,{msg:port.datapool1()});
     })
