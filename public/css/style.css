@@ -78,7 +78,7 @@ a:hover {
 }
 .search{
     border:0;
-    width:10em;
+    width:11em;
     text-align:center;
     font-size:2em;
     margin:0.5em 0;
@@ -90,8 +90,8 @@ a:hover {
 }
 .rfid{
    border:0;
-   width:20em;
-   text-align:left;
+   width:11em;
+   text-align:center;
    font-size:2em;
    margin:0.5em 0;
  }

@@ -1,9 +1,17 @@
 <%- include('header') %>
-<span>
-  <form action="/search" method="GET">
-    <input type="text" name="postId" placeholder="在此输入电池信息以搜索" class="search" />
-  </form>
-</span>
+<div class="nav">
+  <div class="ui grid">
+    <div class="four wide column"></div>
+
+    <div class="eight wide column">
+      <span>
+        <form action="/search" method="GET">
+          <input type="text" name="postId" placeholder="在此输入电池信息以搜索" class="search" />
+        </form>
+      </span>
+    </div>
+  </div>
+</div>
 <% posts.forEach(function (post) { %>
   <%- include('components/post-content', { post: post }) %>
 <% }) %>
