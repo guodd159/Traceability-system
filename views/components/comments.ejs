@@ -29,9 +29,9 @@
         <% if (user) { %>
           <form class="ui reply form" method="post" action="/posts/<%= post._id %>/comment">
             <div class="field">
-              <textarea name="content"></textarea>
+              <textarea name="content" placeholder="在此输入交流信息"></textarea>
             </div>
-            <input type="submit" class="ui icon button" value="备注" />
+            <input type="submit" class="ui icon button" value="提交" />
           </form>
         <% } %>
 

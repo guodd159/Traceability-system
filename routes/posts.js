@@ -219,7 +219,7 @@ router.post('/:postId/comment', checkLogin, function(req, res, next) {
 
   CommentModel.create(comment)
     .then(function () {
-      req.flash('success', '备注成功');
+      req.flash('success', '提交成功');
       // 留言成功后跳转到上一页
       res.redirect('back');
     })
@@ -233,7 +233,7 @@ router.get('/:postId/comment/:commentId/remove', checkLogin, function(req, res, 
 
   CommentModel.delCommentById(commentId, author)
     .then(function () {
-      req.flash('success', '删除备注成功');
+      req.flash('success', '删除成功');
       // 删除成功后跳转到上一页
       res.redirect('back');
     })
