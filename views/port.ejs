@@ -1,12 +1,22 @@
 <%- include('header') %>
-<div class="eight wide column">
-    获取RFID数据（需刷新浏览器）：<%- msg %>
-</div>
-<span>
+<div class="port">
+
+    <div class="rfid">
+        获取RFID数据（需刷新浏览器）:<input type="text"  placeholder="<%- postId %>"/>
+    </div>
+    <span>
     <form action="/search" method="GET">
-        <input type="text" name="postId" placeholder="输入RFID数据" class="search" />
+        <input type="text" name="postId" placeholder="输入RFID数据进行搜索" class="search" />
     </form>
-</span>
+    </span>
+</div>
+
+<!--<div class="eight wide column">-->
+<!--<span>-->
+    <!--<form action="/search" method="GET">-->
+        <!--<input type="text" name="postId" placeholder="输入RFID数据进行搜索" class="search" />-->
+    <!--</form>-->
+<!--</span>-->
 <%- include('footer') %>
 
 

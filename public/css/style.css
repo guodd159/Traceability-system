@@ -78,8 +78,20 @@ a:hover {
 }
 .search{
     border:0;
-    width:8em;
+    width:12em;
     text-align:left;
     font-size:2em;
     margin:0.5em 0;
 }
+.port {
+  margin-bottom: 20px;
+  color: #999;
+  text-align: center;
+}
+.rfid{
+   border:0;
+   width:20em;
+   text-align:left;
+   font-size:2em;
+   margin:0.5em 0;
+ }
