@@ -17,7 +17,7 @@
           <span class="tag"><%= post.created_at %></span>
           <span class="tag right">
             <span>浏览(<%= post.pv %>)</span>
-            <span>备注(<%= post.commentsCount %>)</span>
+            <span><a href="/posts/<%= post._id %>">用户交流</a>(<%= post.commentsCount %>)</span>
 
             <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
               <div class="ui inline dropdown">
