@@ -1,6 +1,6 @@
+var path = require('path');
 var express = require('express');
 var router = express.Router();
-var path = require('path');
 var PostModel = require('../models/posts');
 var CommentModel = require('../models/comments');
 
@@ -29,7 +29,7 @@ router.post('/', checkLogin, function(req, res, next) {
   var author = req.session.user._id;
   var title = req.fields.title;
   var content = req.fields.content;
-  var picture = req.files.picture.path.split(path.sep).pop();
+  var chart = req.files.chart.path.split(path.sep).pop();
   // 校验参数
   try {
     if (!title.length) {
@@ -38,6 +38,9 @@ router.post('/', checkLogin, function(req, res, next) {
     if (!content.length) {
       throw new Error('请填写内容');
     }
+    if (!req.files.chart.name) {
+          throw new Error('缺少图片');
+      }
   } catch (e) {
     req.flash('error', e.message);
     return res.redirect('back');
@@ -47,7 +50,7 @@ router.post('/', checkLogin, function(req, res, next) {
     author: author,
     title: title,
     content: content,
-    picture:picture,
+    chart: chart,
     pv: 0
   };
 
@@ -55,8 +58,8 @@ router.post('/', checkLogin, function(req, res, next) {
     .then(function (result) {
       // 此 post 是插入 mongodb 后的值，包含 _id
       post = result.ops[0];
-      console.log(result);
-      console.log(post);
+      // console.log(result);
+      // console.log(post);
 
       req.flash('success', '成功');
       // 发表成功后跳转到该文章页

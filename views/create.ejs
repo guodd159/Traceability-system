@@ -11,7 +11,7 @@
   </div>
 
   <div class="eight wide column">
-    <form class="ui form segment" method="post" action="/posts">
+    <form class="ui form segment" method="post" enctype="multipart/form-data" action="/posts">
       <div class="field required">
         <label>标题</label>
         <input type="text"  placeholder="输入信息与RFID标签数据一致" name="title">
@@ -21,8 +21,8 @@
         <textarea name="content" placeholder="在此输入电池信息" rows="5"></textarea>
       </div>
       <div class="field required">
-        <label>图片</label>
-        <input type="file" name="picture">
+        <label>图表</label>
+        <input type="file" name="chart">
       </div>
       <input type="submit" class="ui button" value="存储">
     </div>
