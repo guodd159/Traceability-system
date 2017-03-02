@@ -13,6 +13,7 @@
       <div class="ui segment">
         <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
         <pre><%- post.content %></pre>
+        <img class="avatar" src="/img/<%= post.picture %>">
         <div>
           <span class="tag"><%= post.created_at %></span>
           <span class="tag right">

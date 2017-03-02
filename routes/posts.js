@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 var PostModel = require('../models/posts');
 var CommentModel = require('../models/comments');
 
@@ -18,7 +19,7 @@ router.get('/', function(req, res, next) {
     .catch(next);
 });
 
-// GET /posts/create 发表文章页
+// GET /posts/create 信息录入页
 router.get('/create', checkLogin, function(req, res, next) {
   res.render('create');
 });
@@ -28,7 +29,7 @@ router.post('/', checkLogin, function(req, res, next) {
   var author = req.session.user._id;
   var title = req.fields.title;
   var content = req.fields.content;
-
+  var picture = req.files.picture.path.split(path.sep).pop();
   // 校验参数
   try {
     if (!title.length) {
@@ -46,6 +47,7 @@ router.post('/', checkLogin, function(req, res, next) {
     author: author,
     title: title,
     content: content,
+    picture:picture,
     pv: 0
   };
 
@@ -53,6 +55,9 @@ router.post('/', checkLogin, function(req, res, next) {
     .then(function (result) {
       // 此 post 是插入 mongodb 后的值，包含 _id
       post = result.ops[0];
+      console.log(result);
+      console.log(post);
+
       req.flash('success', '成功');
       // 发表成功后跳转到该文章页
       res.redirect(`/posts/${post._id}`);
