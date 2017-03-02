@@ -95,3 +95,9 @@ a:hover {
    font-size:2em;
    margin:0.5em 0;
  }
+.chart {
+    border-radius: 3px;
+    width: 48px;
+    height: 48px;
+    float: left;
+}

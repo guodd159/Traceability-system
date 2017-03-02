@@ -12,8 +12,9 @@
     <div class="eight wide column">
       <div class="ui segment">
         <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
-        <pre><%- post.content %><img class="avatar" src="/img/<%= post.chart %>">
-        </pre>
+        <pre><%- post.content %></pre>
+        <pre><img class="chart" src="/img/<%= post.chart %>"></pre>
+
         <div>
           <span class="tag"><%= post.created_at %></span>
           <span class="tag right">
