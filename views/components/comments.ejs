@@ -3,7 +3,7 @@
   <div class="eight wide column">
     <div class="ui segment">
       <div class="ui minimal comments">
-        <h3 class="ui dividing header">用户交流
+        <h5 class="ui dividing header">用户交流
 
         <% comments.forEach(function (comment) { %>
           <div class="comment">
@@ -29,7 +29,7 @@
         <% if (user) { %>
           <form class="ui reply form" method="post" action="/posts/<%= post._id %>/comment">
             <div class="field">
-              <textarea name="content" placeholder="在此输入交流信息"></textarea>
+              <textarea name="content" placeholder="在此输入交流信息" rows="5"></textarea>
             </div>
             <input type="submit" class="ui icon button" value="提交" />
           </form>

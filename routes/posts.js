@@ -119,8 +119,9 @@ router.post('/:postId/edit', checkLogin, function(req, res, next) {
   var author = req.session.user._id;
   var title = req.fields.title;
   var content = req.fields.content;
+  var chart1 = req.files.chart1.path.split(path.sep).pop();
 
-  PostModel.updatePostById(postId, author, { title: title, content: content })
+  PostModel.updatePostById(postId, author, { title: title, content: content, chart: chart1})
     .then(function () {
       req.flash('success', '编辑成功');
       // 编辑成功后跳转到上一页
