@@ -1,18 +1,11 @@
-// var Post = require('../lib/mongo').Post;
 
-// module.exports = {
-//   // 创建一篇文章
-//   create: function create(post) {
-//     return Post.create(post).exec();
-//   }
-// };
 
 var marked = require('marked');
 var Post = require('../lib/mongo').Post;
 
 var CommentModel = require('./comments');
 
-// 给 post 添加留言数 commentsCount
+// 给 post 添加交流数 commentsCount
 Post.plugin('addCommentsCount', {
   afterFind: function (posts) {
     return Promise.all(posts.map(function (post) {

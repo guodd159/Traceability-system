@@ -12,17 +12,17 @@ Comment.plugin('contentToHtml', {
 });
 
 module.exports = {
-  // 创建一个留言
+  // 创建一个用户交流
   create: function create(comment) {
     return Comment.create(comment).exec();
   },
 
-  // 通过用户 id 和留言 id 删除一个留言
+  // 通过用户 id 和交流 id 删除一个交流
   delCommentById: function delCommentById(commentId, author) {
     return Comment.remove({ author: author, _id: commentId }).exec();
   },
 
-  // 通过文章 id 获取该文章下所有留言，按留言创建时间升序
+  // 通过信息 id 获取该信息下所有交流，按交流创建时间升序
   getComments: function getComments(postId) {
     return Comment
       .find({ postId: postId })
@@ -33,7 +33,7 @@ module.exports = {
       .exec();
   },
 
-  // 通过文章 id 获取该文章下留言数
+  // 通过信息 id 获取该信息下交流数
   getCommentsCount: function getCommentsCount(postId) {
     return Comment.count({ postId: postId }).exec();
   }
