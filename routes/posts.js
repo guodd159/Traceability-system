@@ -9,14 +9,41 @@ var checkLogin = require('../middlewares/check').checkLogin;
 
 router.get('/', function(req, res, next) {
   var author = req.query.author;
-
-  PostModel.getPosts(author)
-    .then(function (posts) {
-      res.render('posts', {
-        posts: posts
-      });
-    })
-    .catch(next);
+  var page = parseInt(req.query.p) || 1;
+    Promise.all([
+        PostModel.total(author),// 获取文章信息
+        PostModel.getPosts(author,page)// 获取该文章所有留言
+    ])
+        .then(function (result) {
+            var num = result[0];
+            var posts = result[1];
+            // if (!post) {
+            //     throw new Error('该文章不存在');
+            // }
+            console.log(num);
+          res.render('posts', {
+                      posts: posts,
+                      page: page,
+                      isFirstPage: (page - 1) == 0,
+                      isLastPage: ((page - 1) * 3 + posts.length) == num
+                    });
+        })
+        .catch(next);
+  // PostModel.total(author)
+  //   .then(function(num){
+  //     num: num;
+  //   })
+  //   .catch(next);
+  // PostModel.getPosts(author, page)
+  //   .then(function (posts) {
+  //     res.render('posts', {
+  //       posts: posts,
+  //       page: page,
+  //       isFirstPage: (page - 1) == 0,
+  //       isLastPage: ((page - 1) * 3 + posts.length) == 5
+  //     });
+  //   })
+  //   .catch(next);
 });
 
 // GET /posts/create 信息录入页

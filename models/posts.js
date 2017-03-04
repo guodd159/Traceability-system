@@ -67,15 +67,25 @@ module.exports = {
       .contentToHtml()
       .exec();
   },
-
+  total: function total(author) {
+    var query = {};
+    if (author) {
+        query.author = author;
+    }
+    return Post
+      .count(query)
+      .exec();
+  },
+  //   console.log(total);
   // 按创建时间降序获取所有用户文章或者某个特定用户的所有文章
-  getPosts: function getPosts(author) {
+  getPosts: function getPosts(author, page) {
     var query = {};
     if (author) {
       query.author = author;
     }
     return Post
-      .find(query)
+      // .count(query)
+      .find(query, {skip: (page-1)*3, limit: 3})
       .populate({ path: 'author', model: 'User' })
       .sort({ _id: -1 })
       .addCreatedAt()

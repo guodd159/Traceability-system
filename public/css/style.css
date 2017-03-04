@@ -101,3 +101,6 @@ a:hover {
     height: 48px;
     float: left;
 }
+.prepage a{float:left;text-decoration:none;padding:.5em 1em;color:#f00;font-weight:bold;}
+.nextpage a{float:right;text-decoration:none;padding:.5em 1em;color:#f00;font-weight:bold;}
+.prepage a:hover,.nextpage a:hover{text-decoration:none;background-color:#f00;color:#f9f9f9;-webkit-transition:color .2s linear;}

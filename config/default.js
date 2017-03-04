@@ -5,5 +5,5 @@ module.exports = {
     key: 'traceability',
     maxAge: 2592000000
   },
-  mongodb: 'mongodb://localhost:27017/traceability'
+  mongodb: 'mongodb://127.0.0.1:27017/traceability'
 };
