@@ -11,8 +11,8 @@ router.get('/', function(req, res, next) {
   var author = req.query.author;
   var page = parseInt(req.query.p) || 1;
     Promise.all([
-        PostModel.total(author),// 获取文章信息
-        PostModel.getPosts(author,page)// 获取该文章所有留言
+        PostModel.total(author),// 获取信息总数
+        PostModel.getPosts(author,page)// 获取该页信息
     ])
         .then(function (result) {
             var num = result[0];
