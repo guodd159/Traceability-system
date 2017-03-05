@@ -50,12 +50,14 @@ module.exports = {
   //搜索信息
   search: function search(postId) {
     //var postId  = new RegExp(postId, "i");
-    return Post
-      .findOne({ title: {$regex:postId} })
-      .populate({ path: 'author', model: 'User' })
-      .addCreatedAt()
-      .contentToHtml()
-      .exec();
+      if(postId) {
+          return Post
+              .findOne({title: {$regex: postId}})
+              .populate({path: 'author', model: 'User'})
+              .addCreatedAt()
+              .contentToHtml()
+              .exec();
+      }
   },
   // 通过文章 id 获取一篇文章
   getPostById: function getPostById(postId) {
