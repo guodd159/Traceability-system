@@ -77,9 +77,9 @@ a:hover {
   color: #999;
 }
 .search{
-    border:2em;
+    border:0em;
     width:11em;
-    text-align:center;
+    text-align:left;
     font-size:1.5em;
     margin:0.5em 0;
 }
