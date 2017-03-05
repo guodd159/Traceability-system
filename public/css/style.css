@@ -77,10 +77,10 @@ a:hover {
   color: #999;
 }
 .search{
-    border:0;
+    border:2em;
     width:11em;
     text-align:center;
-    font-size:2em;
+    font-size:1.5em;
     margin:0.5em 0;
 }
 .port {
@@ -101,6 +101,6 @@ a:hover {
     height: 48px;
     float: left;
 }
-.prepage a{float:left;text-decoration:none;padding:.5em 1em;color:#f00;font-weight:bold;}
-.nextpage a{float:right;text-decoration:none;padding:.5em 1em;color:#f00;font-weight:bold;}
-.prepage a:hover,.nextpage a:hover{text-decoration:none;background-color:#f00;color:#f9f9f9;-webkit-transition:color .2s linear;}
+.prepage a{float:left;text-decoration:none;padding:.5em 1em;color: #140000;font-weight:bold;}
+.nextpage a{float:right;text-decoration:none;padding:.5em 1em;color: #140000;font-weight:bold;}
+.prepage a:hover,.nextpage a:hover{text-decoration:none;-webkit-transition:color .2s linear;}
