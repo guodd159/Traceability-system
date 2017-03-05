@@ -97,10 +97,20 @@ a:hover {
  }
 .chart {
     border-radius: 3px;
-    width: 48px;
-    height: 48px;
+    width: 100%;
+    height: 100%;
     float: left;
 }
 .prepage a{float:left;text-decoration:none;padding:.5em 1em;color: #140000;font-weight:bold;}
 .nextpage a{float:right;text-decoration:none;padding:.5em 1em;color: #140000;font-weight:bold;}
 .prepage a:hover,.nextpage a:hover{text-decoration:none;-webkit-transition:color .2s linear;}
+.wrap{
+    width:220px;
+    height: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+.p{
+    word-wrap:break-word;
+}
