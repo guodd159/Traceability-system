@@ -1,11 +1,4 @@
-// var User = require('../lib/mongo').User;
 
-// module.exports = {
-//   // 注册一个用户
-//   create: function create(user) {
-//     return User.create(user).exec();
-//   }
-// };
 
 var User = require('../lib/mongo').User;
 
@@ -21,5 +14,8 @@ module.exports = {
       .findOne({ name: name })
       .addCreatedAt()
       .exec();
+  },
+  updatePasswordByName: function updatePasswordByName(name,data){
+      return User.update({name: name}, { $set: data }).exec();
   }
 };

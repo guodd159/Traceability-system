@@ -1,0 +1,114 @@
+/**
+*在Position属性值为absolute的同时，
+*如果有一级父对象（无论是父对象还是祖父对象，或者再高的辈分，一样）
+*的Position属性值为Relative时，则上述的相对浏览器窗口定位将会变成相对父对象定位，
+*这对精确定位是很有帮助的。
+*/
+*{
+    margin: 0;
+    padding: 0;
+	list-style-type:none;
+}
+/*nav导航盒子*/
+div.nav{
+    width: 1024px;
+    height:36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    background: #643519;
+	margin:40px auto 0 auto;
+}
+/*nav-main*/
+ul.nav-main{
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+}
+ul.nav-main span{
+    display: inline-block;
+    margin-left: 18px;
+    width: 7px;
+    height: 7px;
+    background: url('../img/down-icon.png') no-repeat;
+}
+
+/*图标向上旋转*/
+.hover-up{
+    transition-duration: .5s;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+/*图标向下旋转*/
+.hover-down{
+    transition-duration: .5s;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+}
+/*导航条设置*/
+ul.nav-main>li{
+    width: 120px;
+    height: 100%;
+    display: block;
+    float: left;
+    background: #643519;
+    color: #fff;
+    margin-right: 1px;
+    cursor: pointer;
+}
+ul.nav-main>li:hover{
+    background: #643519;
+}
+/*隐藏盒子设置*/
+div.hidden-box{
+    z-index: 1000;
+    width: 118px;
+    border: 1px solid #643519;
+    border-top: 0;
+    position: absolute;
+    display:none;
+	background:#fff;
+    top: 36px;
+}div.hidden-box6{
+     width: 118px;
+     border: 1px solid #643519;
+     border-top: 0;
+     position: absolute;
+     display:none;
+     background:#fff;
+     top: 36px;
+ }div.hidden-box7{
+      width: 118px;
+      border: 1px solid #643519;
+      border-top: 0;
+      position: absolute;
+      display:none;
+      background:#fff;
+      top: 72px;
+  }
+.hidden-box>ul{
+    list-style-type: none;
+    color: #643519;
+    cursor: pointer;
+}
+.hidden-box li:hover{
+    background: #643519;
+    color: #fff;
+}
+/*隐藏盒子位置设置*/
+.hidden-loc-index{
+    left: 121px;
+}
+/*.hidden-loc-us{*/
+    /*left: 242px;*/
+/*}*/
+.hidden-loc-info{
+    left: 242px;
+}
+.box04{
+	left:363px;
+}
+.box05{
+     left:484px;
+ }

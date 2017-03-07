@@ -56,7 +56,7 @@ var port = new SerialPort('com6');
                     // req.flash('error', '请刷卡');
                 }
 
-                res.render('search', {
+                res.render('post', {
                     post: post,
                     comments: comments
                 });

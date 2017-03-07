@@ -1,40 +1,8 @@
 <%- include('header') %>
-<div class="nav">
-  <div class="ui grid">
-    <div class="four wide column"></div>
 
-    <div class="eight wide column">
-      <span>
-        <form action="/search" method="GET">
-          <div class="">
-          <input type="text" name="postId" placeholder="搜索 …" class="ui form segment" />
-          <!--<button type="submit" class="ui form segment">搜索</button>-->
-          </div>
-          <!--<div class="form-group">-->
-            <!--<input type="text" class="form-control" placeholder="搜索 …" name="s" id="s" required="">-->
-          <!--</div>-->
-          <!--<button type="submit" class="btn btn-default" id="searchsubmit">-->
-            <!--<span class="glyphicon glyphicon-search"></span>-->
-          <!--</button>-->
-        </form>
-      </span>
-    </div>
-  </div>
-</div>
+<%- include('daohang') %>
+
 <% posts.forEach(function (post) { %>
-  <%- include('components/post-content', { post: post }) %>
+<%- include('components/post-content', { post: post }) %>
 <% }) %>
-
-<br />
-<div>
-    <% if (!isFirstPage) { %>
-  <span class="prepage"><a title="上一页" href="?p=<%= page-1 %>">上一页</a></span>
-    <% } %>
-
-    <% if (!isLastPage) { %>
-  <span class="nextpage"><a title="下一页" href="?p=<%= page+1 %>">下一页</a></span>
-    <% } %>
-</div>
-
-
 <%- include('footer') %>

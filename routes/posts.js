@@ -29,21 +29,7 @@ router.get('/', function(req, res, next) {
                     });
         })
         .catch(next);
-  // PostModel.total(author)
-  //   .then(function(num){
-  //     num: num;
-  //   })
-  //   .catch(next);
-  // PostModel.getPosts(author, page)
-  //   .then(function (posts) {
-  //     res.render('posts', {
-  //       posts: posts,
-  //       page: page,
-  //       isFirstPage: (page - 1) == 0,
-  //       isLastPage: ((page - 1) * 3 + posts.length) == 5
-  //     });
-  //   })
-  //   .catch(next);
+
 });
 
 // GET /posts/create 信息录入页

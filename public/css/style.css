@@ -1,18 +1,18 @@
 /* ---------- 全局样式 ---------- */
 
-body {
-  width: 1100px;
-  height: 100%;
-  margin: 0 auto;
-  padding-top: 40px;
-}
+/*body {*/
+  /*width: 1024px;*/
+  /*height: 100%;*/
+  /*margin: 0 auto;*/
+  /*padding-top: 40px;*/
+/*}*/
 
 a:hover {
   border-bottom: 3px solid #4fc08d;
 }
 
 .button {
-  background-color: #4fc08d !important;
+  background-color: #643519 !important;
   color: #fff !important;
 }
 
@@ -25,17 +25,17 @@ a:hover {
 
 /* ---------- nav ---------- */
 
-.nav {
-  margin-bottom: 20px;
-  color: #999;
-  text-align: center;
-}
+/*.nav {*/
+  /*margin-bottom: 20px;*/
+  /*color: #999;*/
+  /*text-align: center;*/
+/*}*/
 
-.nav h1 {
-  color: #4fc08d;
-  display: inline-block;
-  margin: 10px 0;
-}
+/*.nav h1 {*/
+  /*color: #4fc08d;*/
+  /*display: inline-block;*/
+  /*margin: 10px 0;*/
+/*}*/
 
 /* ---------- nav-setting ---------- */
 
@@ -114,3 +114,36 @@ a:hover {
 .p{
     word-wrap:break-word;
 }
+
+
+*{ margin:0; padding:0}
+
+body{ font: 14px Arial, Helvetica, sans-serif;
+
+    padding:20px;
+
+}
+
+span{
+
+    /*border-left:1px solid #000;*/
+
+    /*border-bottom:1px solid #000;*/
+
+    margin-top:-1px;
+
+    width:70px;
+
+    display:inline-block;
+
+    text-align:left;}
+
+span.last{
+
+    /*border-top:1px solid #000;*/
+
+    /*border-right:1px solid #000;*/
+
+    width:70px;
+
+    display:inline-block;}

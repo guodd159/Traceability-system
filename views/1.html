@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+    </style>
+    <script type="application/javascript">
+        function print() {
+            document.write("<div style='text-align: center'><b>九九乘法表</b></div>");
+            for (var i = 1; i < 10; i++) {
+                document.write("<div id='div"+i+"' class='div' style='margin:0 auto; width: 600px;'></div>");
+                for (var j = 1; j <i+1; j++) {
+                    document.getElementById("div"+i).innerHTML +="<div class='div_inline' style='display:inline-block'>"+ i + "X" + j + "=" + (i * j)+"&nbsp"+"</div>";
+                    if((i==3&&j==2)||(i==4&&j==2)){
+                        document.getElementById("div"+i).innerHTML +="&nbsp&nbsp";
+                    }
+                }
+                document.getElementById("div"+i).innerHTML +="<br>";
+            }
+
+        }
+        window.onload=print;
+
+    </script>
+</head>
+<body>
+
+
+</body>
+
+</html>
