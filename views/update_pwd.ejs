@@ -1,5 +1,6 @@
 <%- include('header') %>
 <%- include('daohang') %>
+<div class="luru">
 <div class="ui grid">
     <div class="four wide column">
         <a class="avatar"
@@ -9,7 +10,7 @@
             <img class="avatar" src="/img/<%= user.avatar %>">
         </a>
     </div>
-    <!--<div class="eight wide column">-->
+    <div class="eight wide column">
     <div>
         <form class="ui form segment" method="post" enctype="multipart/form-data">
             <!--<div class="field required">-->
@@ -31,6 +32,7 @@
             <input type="submit" class="ui button fluid" value="保存">
     </div>
     </form>
+</div>
 </div>
 
 <%- include('footer') %>

@@ -23,9 +23,9 @@ router.get('/', function(req, res, next) {
                 throw new Error('该信息不存在');
             }
 
-            res.render('search', {
-                post: post,
-                comments: comments
+            res.render('post', {
+                post: post
+                // comments: comments
             });
     })
     .catch(next);

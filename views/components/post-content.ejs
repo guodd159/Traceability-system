@@ -9,17 +9,17 @@
       </a>
     </div>
 
-    <div class="">
+    <div class="six wide column">
       <div class="ui segment">
         <h3><a href="/posts/<%= post._id %>"><%= post.title %></a></h3>
-        <pre class="p"><%- post.content %></pre>
+        <pre><%- post.content %></pre>
         <pre><img class="chart" src="/img/<%= post.chart %>"></pre>
 
         <div>
           <span class="tag"><%= post.created_at %></span>
           <span class="tag right">
             <span>浏览(<%= post.pv %>)</span>
-            <span><a href="/posts/<%= post._id %>">用户交流</a>(<%= post.commentsCount %>)</span>
+            <!--<span><a href="/posts/<%= post._id %>">用户交流</a>(<%= post.commentsCount %>)</span>-->
 
             <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
               <div class="ui inline dropdown">

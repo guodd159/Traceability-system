@@ -17,9 +17,9 @@
 }
 
 .avatar {
-  border-radius: 3px;
-  width: 48px;
-  height: 48px;
+  border-radius: 20px;
+  width: 56px;
+  height: 56px;
   float: right;
 }
 
@@ -77,11 +77,13 @@
   color: #999;
 }
 .search{
-    border:0em;
-    width:11em;
-    text-align:left;
-    font-size:1.5em;
-    margin:0.5em 0;
+    /*float: right;*/
+    width: 500px;
+    height: 25px;
+    padding: 20px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px
 }
 .port {
   margin-bottom: 20px;
@@ -97,8 +99,8 @@
  }
 .chart {
     border-radius: 3px;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     float: left;
 }
 .prepage a{float:left;text-decoration:none;padding:.5em 1em;color: #140000;font-weight:bold;}
@@ -143,3 +145,14 @@
      margin-right: 0px;
      background-image: url("(28).jpeg");
  }
+.luru{
+    /*background: #cfdce8;*/
+    width: 100%;
+    height: 555px;
+    padding: 100px;
+    /*float: right;*/
+    margin: auto;
+    /*margin-top: 100px;*/
+    /*margin-right: 100px;*/
+    /*background-image: url("(28).jpeg");*/
+}

@@ -1,6 +1,7 @@
 <%- include('header') %>
 <%- include('daohang') %>
-<div class="">
+<div class="luru">
+<div class="ui grid">
   <div class="four wide column">
     <a class="avatar"
        href="/posts?author=<%= user._id %>"
@@ -10,7 +11,7 @@
     </a>
   </div>
 
-  <div >
+  <div class="eight wide column" >
     <form class="ui form segment" method="post" enctype="multipart/form-data" action="/posts">
       <div class="field required">
         <label>标题</label>
@@ -25,8 +26,10 @@
         <input type="file" name="chart">
       </div>
       <input type="submit" class="ui button" value="存储">
-    </div>
-  </form>
+    </form>
+  </div>
+
+</div>
 </div>
 
 <%- include('footer') %>
