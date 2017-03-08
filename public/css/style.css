@@ -104,3 +104,42 @@
 .prepage a{float:left;text-decoration:none;padding:.5em 1em;color: #140000;font-weight:bold;}
 .nextpage a{float:right;text-decoration:none;padding:.5em 1em;color: #140000;font-weight:bold;}
 .prepage a:hover,.nextpage a:hover{text-decoration:none;-webkit-transition:color .2s linear;}
+.login{
+    /*background: #cfdce8;*/
+    /*background-image: url("(28).jpeg");*/
+    width: 500px;
+    height: 350px;
+    padding: 25px;
+    float: right;
+    margin-top: 100px;
+    margin-right: 100px
+}
+.logup{
+    /*background: #cfdce8;*/
+    width: 500px;
+    height: 525px;
+    padding: 1px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 100px;
+    /*background-image: url("(28).jpeg");*/
+}
+.loginmodule{
+    /*background: #cfdce8;*/
+    width: 100%;
+    height: 555px;
+    padding: 0px;
+    float: right;
+    margin-top: 0.5px;
+    margin-right: 0px;
+    background-image: url("(28).jpeg");
+}.logupmodule{
+     /*background: #cfdce8;*/
+     width: 100%;
+     height: 555px;
+     padding: 0px;
+     float: right;
+     margin-top: 0.5px;
+     margin-right: 0px;
+     background-image: url("(28).jpeg");
+ }

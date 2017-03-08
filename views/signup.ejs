@@ -1,6 +1,7 @@
 <%- include('header') %>
 <%- include('daohang') %>
-<div class="">
+<div class="logupmodule">
+<div class="logup">
   <div class="four wide column"></div>
   <div class="eight wide column">
     <form class="ui form segment" method="post" enctype="multipart/form-data">
@@ -30,11 +31,12 @@
       </div>
       <div class="field required">
         <label>个人简介</label>
-        <textarea name="bio" rows="5" v-model="user.bio"></textarea>
+        <textarea name="bio" rows="2" v-model="user.bio"></textarea>
       </div>
       <input type="submit" class="ui button fluid" value="注册">
     </div>
   </form>
+</div>
 </div>
 
 <%- include('footer') %>
