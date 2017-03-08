@@ -8,7 +8,7 @@ body {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
-    background-color: #3c79b0;
+    background-color: #400740;
 }
 .wrapper {
     margin: 0 auto;
@@ -108,7 +108,7 @@ h1 {
     line-height: 1.2;
     text-align: center;
     margin: 275px auto;
-    color: #1A88D3;
+    color: #400740;
 }
 .tagline strong {
     font-size: 1.3em;
