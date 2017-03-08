@@ -40,6 +40,16 @@ ul.nav-main span{
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
 }
+.hover-left{
+    transition-duration: .5s;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+.hover-right{
+    transition-duration: .5s;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
 /*图标向下旋转*/
 .hover-down{
     transition-duration: .5s;
@@ -71,17 +81,19 @@ div.hidden-box{
 	background:#fff;
     top: 36px;
 }div.hidden-box6{
+     z-index: 1000;
      width: 118px;
      border: 1px solid #643519;
-     border-top: 0;
+     /*border-top: 0;*/
      position: absolute;
      display:none;
      background:#fff;
      top: 36px;
  }div.hidden-box7{
+      z-index: 1000;
       width: 118px;
       border: 1px solid #643519;
-      border-top: 0;
+      /*border-top: 0;*/
       position: absolute;
       display:none;
       background:#fff;
@@ -100,6 +112,10 @@ div.hidden-box{
 .hidden-loc-index{
     left: 121px;
 }
+.hidden-loc-index6{
+    left: 119px;
+}
+
 /*.hidden-loc-us{*/
     /*left: 242px;*/
 /*}*/
