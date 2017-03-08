@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02d4a2bd-a6ea-414e-9e11-6461e450178e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/menu-btn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/responsive-menu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/responsive-menu.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/modernizr-custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/modernizr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/responsive-menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/responsive-menu.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/update_pwd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/99.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/down-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/upload_d3bf514e12c025faa1dcf0513c43aadf.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/edit.js" afterPath="$PROJECT_DIR$/routes/edit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/components/post-content.ejs" afterPath="$PROJECT_DIR$/views/components/post-content.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/create.ejs" afterPath="$PROJECT_DIR$/views/create.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/daohang.ejs" afterPath="$PROJECT_DIR$/views/daohang.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/edit.ejs" afterPath="$PROJECT_DIR$/views/edit.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/footer.ejs" afterPath="$PROJECT_DIR$/views/footer.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/header.ejs" afterPath="$PROJECT_DIR$/views/header.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/posts.ejs" afterPath="$PROJECT_DIR$/views/posts.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/update_pwd.ejs" afterPath="$PROJECT_DIR$/views/update_pwd.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/signin.ejs" afterPath="$PROJECT_DIR$/views/signin.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/signup.ejs" afterPath="$PROJECT_DIR$/views/signup.ejs" />
     </list>
     <ignored path="myblog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,11 +45,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signin.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="signin.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/signin.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="40">
+              <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/signup.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="daohang.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/daohang.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="154" column="32" lean-forward="true" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -90,31 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
+            <state relative-caret-position="130">
               <caret line="98" column="23" lean-forward="true" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update_pwd.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/update_pwd.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1220">
-              <caret line="61" column="21" lean-forward="true" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="posts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/posts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-913">
-              <caret line="126" column="3" lean-forward="true" selection-start-line="126" selection-start-column="3" selection-end-line="126" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -202,8 +177,6 @@
         <option value="$PROJECT_DIR$/views/posts.html" />
         <option value="$PROJECT_DIR$/views/inde.html" />
         <option value="$PROJECT_DIR$/views/error.ejs" />
-        <option value="$PROJECT_DIR$/views/signin.ejs" />
-        <option value="$PROJECT_DIR$/views/signup.ejs" />
         <option value="$PROJECT_DIR$/views/search.ejs" />
         <option value="$PROJECT_DIR$/models/users.js" />
         <option value="$PROJECT_DIR$/views/post.ejs" />
@@ -219,7 +192,6 @@
         <option value="$PROJECT_DIR$/views/header.ejs" />
         <option value="$PROJECT_DIR$/views/edit.ejs" />
         <option value="$PROJECT_DIR$/views/create.ejs" />
-        <option value="$PROJECT_DIR$/views/daohang.ejs" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/edit.js" />
         <option value="$PROJECT_DIR$/routes/update_pwd.js" />
@@ -227,6 +199,9 @@
         <option value="$PROJECT_DIR$/views/components/post-content.ejs" />
         <option value="$PROJECT_DIR$/views/posts.ejs" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/views/daohang.ejs" />
+        <option value="$PROJECT_DIR$/views/signin.ejs" />
+        <option value="$PROJECT_DIR$/views/signup.ejs" />
       </list>
     </option>
   </component>
@@ -692,7 +667,7 @@
       <workItem from="1488871532523" duration="491000" />
       <workItem from="1488872075654" duration="9672000" />
       <workItem from="1488933439606" duration="169000" />
-      <workItem from="1488933649252" duration="9477000" />
+      <workItem from="1488933649252" duration="10074000" />
     </task>
     <task id="LOCAL-00001" summary="修改port.ejs">
       <created>1487844915414</created>
@@ -897,11 +872,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488936658024</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="xiugai导航条">
+      <created>1488943222533</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1488943222533</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157401000" />
+    <option name="totallyTimeSpent" value="157998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -974,7 +956,8 @@
     <MESSAGE value="布局搜索" />
     <MESSAGE value="修改错误处理页面" />
     <MESSAGE value="增加导航条" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加导航条" />
+    <MESSAGE value="xiugai导航条" />
+    <option name="LAST_COMMIT_MESSAGE" value="xiugai导航条" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1042,13 +1025,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="8" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/signup.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1232,14 +1208,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/daohang.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="193" column="48" lean-forward="false" selection-start-line="193" selection-start-column="48" selection-end-line="193" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/port.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1312,14 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/signin.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/posts.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -1330,8 +1290,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="130">
           <caret line="98" column="23" lean-forward="true" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/daohang.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="154" column="32" lean-forward="true" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/signup.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/signin.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
         </state>
       </provider>
