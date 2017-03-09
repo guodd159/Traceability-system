@@ -1,11 +1,35 @@
 <%- include('header') %>
-<%- include('daohang') %>
+<div class="nav">
+  <div class="ui grid">
+    <div class="four wide column"></div>
 
-<%- include('search') %>
+    <div class="eight wide column">
+      <span>
+        <form action="/search" method="GET">
+          <div class="">
+          <input type="text" name="postId" placeholder="搜索 …" class="ui form segment" />
 
-<br><br><br><br>
+          </div>
+
+        </form>
+      </span>
+    </div>
+  </div>
+</div>
 <% posts.forEach(function (post) { %>
-<%- include('components/post-content', { post: post }) %>
+  <%- include('components/post-content', { post: post }) %>
 <% }) %>
-<%- include('pagging') %>
+
+<br />
+<div>
+    <% if (!isFirstPage) { %>
+  <span class="prepage"><a title="上一页" href="?p=<%= page-1 %>">上一页</a></span>
+    <% } %>
+
+    <% if (!isLastPage) { %>
+  <span class="nextpage"><a title="下一页" href="?p=<%= page+1 %>">下一页</a></span>
+    <% } %>
+</div>
+
+
 <%- include('footer') %>

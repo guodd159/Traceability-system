@@ -2,7 +2,7 @@ var path = require('path');
 var express = require('express');
 var router = express.Router();
 var PostModel = require('../models/posts');
-var CommentModel = require('../models/comments');
+// var CommentModel = require('../models/comments');
 
 var checkLogin = require('../middlewares/check').checkLogin;
 
@@ -88,19 +88,19 @@ router.get('/:postId', function(req, res, next) {
 
   Promise.all([
     PostModel.getPostById(postId),// 获取文章信息
-    CommentModel.getComments(postId),// 获取该文章所有留言
+    // CommentModel.getComments(postId),// 获取该文章所有留言
     PostModel.incPv(postId)// pv 加 1
   ])
   .then(function (result) {
     var post = result[0];
-    var comments = result[1];
+    // var comments = result[1];
     if (!post) {
       throw new Error('该文章不存在');
     }
 
     res.render('post', {
-      post: post,
-      comments: comments
+      post: post
+      // comments: comments
     });
   })
   .catch(next);
@@ -159,37 +159,39 @@ router.get('/:postId/remove', checkLogin, function(req, res, next) {
 
 
 // POST /posts/:postId/comment 创建一条留言
-router.post('/:postId/comment', checkLogin, function(req, res, next) {
-  var author = req.session.user._id;
-  var postId = req.params.postId;
-  var content = req.fields.content;
-  var comment = {
-    author: author,
-    postId: postId,
-    content: content
-  };
-
-  CommentModel.create(comment)
-    .then(function () {
-      req.flash('success', '提交成功');
-      // 留言成功后跳转到上一页
-      res.redirect('back');
-    })
-    .catch(next);
-});
+// router.post('/:postId/comment', checkLogin, function(req, res, next) {
+//   var author = req.session.user._id;
+//   var postId = req.params.postId;
+//   var content = req.fields.content;
+//   var comment = {
+//     author: author,
+//     postId: postId,
+//     content: content
+//   };
+//
+//   CommentModel.create(comment)
+//     .then(function () {
+//       req.flash('success', '提交成功');
+//       // 留言成功后跳转到上一页
+//       res.redirect('back');
+//     })
+//     .catch(next);
+// });
 
 // GET /posts/:postId/comment/:commentId/remove 删除一条留言
-router.get('/:postId/comment/:commentId/remove', checkLogin, function(req, res, next) {
-  var commentId = req.params.commentId;
-  var author = req.session.user._id;
+// router.get('/:postId/comment/:commentId/remove', checkLogin, function(req, res, next) {
+//   var commentId = req.params.commentId;
+//   var author = req.session.user._id;
+//
+//   CommentModel.delCommentById(commentId, author)
+//     .then(function () {
+//       req.flash('success', '删除成功');
+//       // 删除成功后跳转到上一页
+//       res.redirect('back');
+//     })
+//     .catch(next);
+// });
 
-  CommentModel.delCommentById(commentId, author)
-    .then(function () {
-      req.flash('success', '删除成功');
-      // 删除成功后跳转到上一页
-      res.redirect('back');
-    })
-    .catch(next);
-});
+
 
 module.exports = router;

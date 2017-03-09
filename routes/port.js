@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var PostModel = require('../models/posts');
-var CommentModel = require('../models/comments');
+// var CommentModel = require('../models/comments');
 var SerialPort = require('serialport');  //引入模块
 var port = new SerialPort('com6');
 
@@ -44,21 +44,21 @@ var port = new SerialPort('com6');
         Promise.all([
             //PostModel.getPostById(keyword),// 获取文章信息
             PostModel.search(keyword),
-            CommentModel.getComments(keyword),// 获取该文章所有留言
+            // CommentModel.getComments(keyword),// 获取该文章所有留言
             //PostModel.search(keyword),
             PostModel.incPv(keyword)// pv 加 1
         ])
             .then(function (result) {
                 var post = result[0];
-                var comments = result[1];
+                // var comments = result[1];
                 if (!post) {
                     throw new Error('请刷卡');
                     // req.flash('error', '请刷卡');
                 }
 
-                res.render('post', {
-                    post: post,
-                    comments: comments
+                res.render('search', {
+                    post: post
+                    // comments: comments
                 });
             })
             .catch(next);

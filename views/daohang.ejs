@@ -1,139 +1,4 @@
-<!--<body>-->
-<!--<header>-->
-    <!--<div class="wrapper">-->
-        <!--<div class="brand">-->
-            <!--<p><a href="#" class="logo">可溯源系统数字化工作平台</a></p>-->
-        <!--</div>-->
 
-        <!--<div class="rm-container">-->
-            <!--<a class="rm-toggle rm-button rm-nojs" href="">导航菜单</a>-->
-
-            <!--<nav class="rm-nav rm-nojs rm-lighten">-->
-                <!--<ul>-->
-                    <!--<li><a href="#">首页</a></li>-->
-
-                    <!--<li><a >电池信息</a>-->
-                        <!--<ul>-->
-                            <!--<li><a href="/posts">所有用户</a></li>-->
-
-                            <!--<li><a href="/posts/create">信息录入</a>-->
-                                <!--<ul>-->
-                                    <!--<li><a href="#">SEM平面图</a></li>-->
-                                    <!--<li><a href="#">SEM截面图</a></li>-->
-                                    <!--<li><a href="#">EDX图</a></li>-->
-                                    <!--<li><a href="#">XRD图</a></li>-->
-                                    <!--<li><a href="#">霍尔效应</a></li>-->
-                                <!--</ul>-->
-                            <!--</li>-->
-                            <!--<li><a href="/port">串口数据</a></li>-->
-
-                        <!--</ul>-->
-                    <!--</li>-->
-                    <!--<li><a href="#">测试结果</a>-->
-                        <!--<ul>-->
-                            <!--<li><a href="#">SEM平面图</a></li>-->
-                            <!--<li><a href="#">SEM截面图</a></li>-->
-                            <!--<li><a href="#">EDX图</a></li>-->
-                            <!--<li><a href="#">XRD图</a></li>-->
-                            <!--<li><a href="#">霍尔效应</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
-                    <!--<li><a href="#">个人中心</a>-->
-                        <!--<ul>-->
-
-                            <!--<li><a href="#">修改密码</a></li>-->
-                            <!--<li><a href="/signout">登出</a></li>-->
-
-                            <!--<li><a href="/signup">注册</a></li>-->
-                            <!--<li><a href="/signin">登录</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
-
-                <!--</ul>-->
-            <!--</nav>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</header>-->
-<!--</body>-->
-
-
-
-<!--<div class="nav">-->
-    <!--&lt;!&ndash;导航条&ndash;&gt;-->
-    <!--<ul class="nav-main">-->
-        <!--<li>首页</li>-->
-        <!--<li id="li-1">数据中心<span></span></li>-->
-        <!--&lt;!&ndash;<li id="li-2">串口数据<span></span></li>&ndash;&gt;-->
-        <!--<li id="li-3"><a href="/posts/create">数据录入</a><span></span></li>-->
-        <!--<li id="li-4">测试结果<span></span></li>-->
-        <!--<li id="li-5">个人中心<span></span></li>-->
-        <!--&lt;!&ndash;<li >&ndash;&gt;-->
-            <!--&lt;!&ndash;<form action="/search" method="GET">&ndash;&gt;-->
-              <!--&lt;!&ndash;<input type="text" name="postId" placeholder="搜索 …"  />&ndash;&gt;-->
-                  <!--&lt;!&ndash;&lt;!&ndash;<button type="submit" class="ui form segment">搜索</button>&ndash;&gt;&ndash;&gt;-->
-            <!--&lt;!&ndash;</form>&ndash;&gt;-->
-        <!--&lt;!&ndash;</li>&ndash;&gt;-->
-    <!--</ul>-->
-    <!--&lt;!&ndash;隐藏盒子&ndash;&gt;-->
-    <!--<div id="box-1" class="hidden-box hidden-loc-index">-->
-
-        <!--<ul>-->
-            <!--<% if (user) { %>-->
-            <!--<li><a href="/posts">所有信息</a></li>-->
-            <!--<li><a href="/posts?author=<%= user._id %>">个人信息</a></li>-->
-            <!--<li>掺杂数据</li>-->
-            <!--<li><a href="/port">串口数据</a></li>-->
-            <!--<% } %>-->
-        <!--</ul>-->
-
-    <!--</div>-->
-
-    <!--<div id="box-3" class="hidden-box hidden-loc-info">-->
-        <!--<ul class="nav-main">-->
-            <!--<% if (user) { %>-->
-            <!--<li><a href="/posts/create">掺杂数据</a></li>-->
-            <!--<li id="li-6">测试数据<span></span></li>-->
-            <!--<div id="box-6" class="hidden-box6 hidden-loc-index6">-->
-                <!--<ul>-->
-                    <!--<li>SEM平面图</li>-->
-                    <!--<li>SEM截面图</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-            <!--<li id="li-7">分析数据<span></span></li>-->
-                <!--<div id="box-7" class="hidden-box7 hidden-loc-index6">-->
-                <!--<ul>-->
-                    <!--<li>XRD分析图</li>-->
-                    <!--<li>霍尔效应图</li>-->
-                <!--</ul>-->
-                <!--</div>-->
-            <!--<% } %>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--<div id="box-4" class="hidden-box hidden-loc-info box04">-->
-        <!--<ul>-->
-            <!--<% if (user) { %>-->
-            <!--<li>SEM平面图</li>-->
-            <!--<li>SEM截面图</li>-->
-            <!--<li>XRD分析图</li>-->
-            <!--<li>EDX分析图</li>-->
-            <!--<li>霍尔效应图</li>-->
-            <!--<% } %>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <!--<div id="box-5" class="hidden-box hidden-loc-info box05">-->
-        <!--<ul>-->
-            <!--<% if (user) { %>-->
-            <!--<li><a href="/edit">修改密码</a></li>-->
-            <!--<li><a href="/signout">退出系统</a></li>-->
-            <!--<% } else { %>-->
-            <!--<li><a href="/signup">用户注册</a></li>-->
-            <!--<li><a href="/signin">用户登录</a></li>-->
-            <!--<% } %>-->
-        <!--</ul>-->
-    <!--</div>-->
-<!--</div>-->
-<!--</br>-->
-<!--</br>-->
 
 
 
@@ -165,10 +30,17 @@
                 </li>
                 <li><a >数据录入</a>
                     <ul>
+
                         <li><a href="/posts/create">掺杂数据</a></li>
                         <li><a href="#">测试数据</a>
                             <ul>
                                 <li><a href="#">SEM平面图</a></li>
+
+                        <li><a href="/canz">掺杂数据</a></li>
+                        <li><a href="#">测试数据</a>
+                            <ul>
+                                <li><a href="/posts/create">SEM平面图</a></li>
+
                                 <li><a href="#">SEM截面图</a></li>
 
                             </ul>
@@ -209,6 +81,10 @@
 
 
 </div>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 </header>
 
 

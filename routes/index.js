@@ -12,9 +12,7 @@ module.exports = function (app) {
   app.use('/posts', require('./posts'));
   app.use('/port', require('./port'));
   app.use('/search', require('./search'));
-  app.use('/update_pwd', require('./update_pwd'));
-//  var port = require('./port')
-  // 404 page
+  app.use('/canz', require('./canz'));
 app.use(function (req, res) {
   if (!res.headersSent) {
     res.render('404');

@@ -1,10 +1,8 @@
 <%- include('header') %>
-<%- include('daohang') %>
-<div class="loginmodule">
-<div class="login">
-  <!--<div class="eight wide column"></div>-->
 
-  <div class="ten wide column">
+<div class="ui grid">
+  <div class="four wide column"></div>
+  <div class="eight wide column">
     <form class="ui form segment" method="post">
       <div class="field required">
         <label>用户名</label>
@@ -15,9 +13,9 @@
         <input placeholder="密码" type="password" name="password">
       </div>
       <input type="submit" class="ui button fluid" value="登录">
-    </form>
-  </div>
+    </div>
+  </form>
 </div>
-</div>
+
 
 <%- include('footer') %>
