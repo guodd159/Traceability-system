@@ -155,4 +155,9 @@
     /*margin-top: 100px;*/
     /*margin-right: 100px;*/
     /*background-image: url("(28).jpeg");*/
-}
+}.pagging{
+     width:800px;
+     height:50px;
+     margin:0 auto;
+     /*background-color:gray;*/
+ }
