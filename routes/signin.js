@@ -3,7 +3,7 @@
 var sha1 = require('sha1');
 var express = require('express');
 var router = express.Router();
-//var port = require('./port');
+
 
 var UserModel = require('../models/users');
 var checkNotLogin = require('../middlewares/check').checkNotLogin;
@@ -35,8 +35,6 @@ router.post('/', checkNotLogin, function(req, res, next) {
       req.session.user = user;
       // 跳转到主页
       res.redirect('/posts');
-      // res.render('port' ,{msg:'ssss'})
-      //res.render('port' ,{msg:port.datapool1()});
     })
     .catch(next);
 });

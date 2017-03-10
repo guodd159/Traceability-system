@@ -1,8 +1,7 @@
 module.exports = function (app) {
-  //var port = require('./port')
+
   app.get('/', function (req, res) {
-        //res.redirect('/posts');
-      //res.render('port' ,{msg:'qwe'})
+
       res.redirect('/signin');
       
   });
@@ -13,6 +12,7 @@ module.exports = function (app) {
   app.use('/port', require('./port'));
   app.use('/search', require('./search'));
   app.use('/canz', require('./canz'));
+  app.use('/update_pwd', require('./update_pwd'));
 app.use(function (req, res) {
   if (!res.headersSent) {
     res.render('404');

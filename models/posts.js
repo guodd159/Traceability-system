@@ -4,28 +4,6 @@ var marked = require('marked');
 var Post = require('../lib/mongo').Post;
 
 
-// var CommentModel = require('./comments');
-
-// 给 post 添加交流数 commentsCount
-// Post.plugin('addCommentsCount', {
-//   afterFind: function (posts) {
-//     return Promise.all(posts.map(function (post) {
-//       return CommentModel.getCommentsCount(post._id).then(function (commentsCount) {
-//         post.commentsCount = commentsCount;
-//         return post;
-//       });
-//     }));
-//   },
-//   afterFindOne: function (post) {
-//     if (post) {
-//       return CommentModel.getCommentsCount(post._id).then(function (count) {
-//         post.commentsCount = count;
-//         return post;
-//       });
-//     }
-//     return post;
-//   }
-// });
 
 // 将 post 的 content 从 markdown 转换成 html
 Post.plugin('contentToHtml', {
@@ -42,6 +20,8 @@ Post.plugin('contentToHtml', {
     return post;
   }
 });
+
+
 
 module.exports = {
 
@@ -61,9 +41,9 @@ module.exports = {
               .exec();
       }
   },
-  // 通过文章 id 获取一篇文章
+
   getPostById: function getPostById(postId) {
-    //var postId  = new RegExp(keyword, "i");
+
     return Post
       .findOne({ _id: postId })
       .populate({ path: 'author', model: 'User' })
@@ -71,6 +51,7 @@ module.exports = {
       .contentToHtml()
       .exec();
   },
+
   total: function total(author) {
     var query = {};
     if (author) {
@@ -80,15 +61,15 @@ module.exports = {
       .count(query)
       .exec();
   },
-  //   console.log(total);
-  // 按创建时间降序获取所有用户文章或者某个特定用户的所有文章
+
+
   getPosts: function getPosts(author, page) {
     var query = {};
     if (author) {
       query.author = author;
     }
     return Post
-      // .count(query)
+
       .find(query, {skip: (page-1)*3, limit: 3})
       .populate({ path: 'author', model: 'User' })
       .sort({ _id: -1 })
@@ -97,14 +78,14 @@ module.exports = {
       .exec();
   },
 
-  // 通过文章 id 给 pv 加 1
+
   incPv: function incPv(postId) {
     return Post
       .update({ _id: postId }, { $inc: { pv: 1 } })
       .exec();
   },
 
-  // 通过文章 id 获取一篇原生文章（编辑文章）
+
 getRawPostById: function getRawPostById(postId) {
   return Post
     .findOne({ _id: postId })
@@ -112,12 +93,12 @@ getRawPostById: function getRawPostById(postId) {
     .exec();
 },
 
-// 通过用户 id 和文章 id 更新一篇文章
+
 updatePostById: function updatePostById(postId, author, data) {
   return Post.update({ author: author, _id: postId }, { $set: data }).exec();
 },
 
-// 通过用户 id 和文章 id 删除一篇文章
+
 delPostById: function delPostById(postId, author) {
   return Post.remove({ author: author, _id: postId}).exec();
 }

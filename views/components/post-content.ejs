@@ -19,19 +19,9 @@
           <span class="tag"><%= post.created_at %></span>
           <span class="tag right">
             <span>浏览(<%= post.pv %>)</span>
-            <!--<span><a href="/posts/<%= post._id %>">用户交流</a>(<%= post.commentsCount %>)</span>-->
 
             <% if (user && post.author._id && user._id.toString() === post.author._id.toString()) { %>
-              <!--<div class="ui inline dropdown">-->
-                <!--<div class="text"></div>-->
-                <!--<i class="dropdown icon"></i>-->
-                <!--<div class="menu">-->
-                  <!--<div class="item"><a href="/posts/<%= post._id %>/edit">修改</a></div>-->
-                  <!--<div class="item"><a href="/posts/<%= post._id %>/remove">删除</a></div>-->
-                <!--</div>-->
-              <!--</div>-->
 
-              <!--<div class="ui compact menu">-->
                 <div class="ui simple dropdown item">
                 <i class="dropdown icon"></i>
                 <div class="menu">
@@ -39,7 +29,6 @@
                   <div class="item"><a href="/posts/<%= post._id %>/remove">删除</a></div>
                 </div>
                 </div>
-              <!--</div>-->
             <% } %>
 
           </span>

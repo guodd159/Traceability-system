@@ -1,8 +1,8 @@
 <%- include('header') %>
 <%- include('daohang') %>
+
 <div class="canza">
-
-
+    <form class="" method="post"  >
 <table class="table">
     <caption>掺杂材料</caption>
     <thead>
@@ -13,14 +13,10 @@
     </thead>
     <tbody>
     <tr class="active">
-        <form class="" method="post"  >
-
         <td><div class="field required"><input placeholder="材料1" type="text" name="cl"></div></td>
-
         <td><input placeholder="" type="text" name="bl"></td>
         <td><input placeholder="" type="text" name="cd"></td>
-            <input type="submit" class="ui button" value="存储">
-        </form>
+
     </tr>
 
     <!--<tr class="success">-->
@@ -37,6 +33,7 @@
         <!--<td><input placeholder="" type="text" name="cd4"></td></tr>-->
     </tbody>
 </table>
-
+        <div><input type="submit" class="ui button" value="存储"></div>
+    </form>
 </div>
 <%- include('footer') %>

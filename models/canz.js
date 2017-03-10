@@ -34,7 +34,7 @@ module.exports = {
         return Canz
             .findOne({ _id: canzId })
             // .populate({ model: 'Canz' })
-            // .addCreatedAt()
+            .addCreatedAt()
             .canzToHtml()
             .exec();
     }

@@ -18,8 +18,6 @@ router.post('/', checkLogin, function(req, res, next) {
     var cl = req.fields.cl;
     var bl = req.fields.bl;
     var cd = req.fields.cd;
-
-
     var canz = {
 
         cl: cl,
@@ -29,13 +27,9 @@ router.post('/', checkLogin, function(req, res, next) {
 
     CanzModel.create(canz)
         .then(function (result) {
-
             canz = result.ops[0];
-            console.log(canz);
-
-
+            // console.log(canz);
             req.flash('success', '成功');
-
             res.redirect(`/canz/${canz._id}`);
         })
         .catch(next);
@@ -46,15 +40,13 @@ router.get('/:canzId', function(req, res, next) {
 
     Promise.all([
         CanzModel.getCanzById(canzId)
-
     ])
         .then(function (result) {
             var canz = result[0];
-
+            console.log(canz);
             if (!canz) {
-                throw new Error('该xinxi不存在');
+                throw new Error('该信息不存在');
             }
-
             res.render('czjg', {
                 canz: canz
 

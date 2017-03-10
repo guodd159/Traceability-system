@@ -42,27 +42,19 @@ var port = new SerialPort('com6');
         var keyword = datapool1();
 
         Promise.all([
-            //PostModel.getPostById(keyword),// 获取文章信息
             PostModel.search(keyword),
-            // CommentModel.getComments(keyword),// 获取该文章所有留言
-            //PostModel.search(keyword),
             PostModel.incPv(keyword)// pv 加 1
         ])
             .then(function (result) {
                 var post = result[0];
-                // var comments = result[1];
-                if (!post) {
+                    if (!post) {
                     throw new Error('请刷卡');
-                    // req.flash('error', '请刷卡');
-                }
-
+                    }
                 res.render('search', {
                     post: post
-                    // comments: comments
                 });
             })
             .catch(next);
-        // res.render('port',{postId:datapool1()});
     });
 
     module.exports=router;
