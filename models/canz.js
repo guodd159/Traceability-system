@@ -37,5 +37,28 @@ module.exports = {
             .addCreatedAt()
             .canzToHtml()
             .exec();
+    },
+    getCanzs: function getCanzs(author, page) {
+        var query = {};
+        if (author) {
+            query.author = author;
+        }
+        return Canz
+            .find(query, {skip: (page-1)*3, limit: 3})
+            .populate({ path: 'author', model: 'User' })
+            .sort({ _id: -1 })
+            .addCreatedAt()
+            .canzToHtml()
+            .exec();
+    },
+    total: function total(author) {
+        var query = {};
+        if (author) {
+            query.author = author;
+        }
+        return Canz
+            .count(query)
+            .exec();
     }
+
 };

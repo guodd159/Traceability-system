@@ -1,0 +1,8 @@
+<%- include('header') %>
+<%- include('daohang') %>
+<% canzs.forEach(function (canz) { %>
+<%- include('canz', { canz: canz }) %>
+<% }) %>
+<br><br>
+<%- include('pagging') %>
+<%- include('footer') %>
