@@ -3,20 +3,23 @@ var router = express.Router();
 var PostModel = require('../models/posts');
 // var CommentModel = require('../models/comments');
 var SerialPort = require('serialport');  //引入模块
-var port = new SerialPort('com6');
+var port = new SerialPort('com4');
 
     port.on('open', function() {
         port.write('main screen turn on', function(err) {
             if (err) {
                  return console.log('Error on write: ', err.message);
             }
-            //console.log('message written');
+            // console.log('message written');
 
             port.on('data',function(data){
-               datapool.push(data.toString()) ;
+               datapool.push(data.toString('hex',5,7)) ;
+               //  var c = data.toString('hex',5,7);
 
+                // console.log(c);
                // res.redirect('/posts');
-               //console.log(data.constructor.name);
+               console.log(datapool);
+               // console.log(data);
            });
 
         });
@@ -34,13 +37,13 @@ var port = new SerialPort('com6');
          var data=datapool.toString();
          datapool = [];
          return data;
-     }
-
+     };
+// console.log(datapool1());
 
 
     router.get('/', function(req, res, next) {
         var keyword = datapool1();
-
+        console.log(keyword);
         Promise.all([
             PostModel.search(keyword),
             PostModel.incPv(keyword)// pv 加 1
@@ -50,7 +53,7 @@ var port = new SerialPort('com6');
                     if (!post) {
                     throw new Error('请刷卡');
                     }
-                res.render('search', {
+                res.render('post', {
                     post: post
                 });
             })
@@ -58,3 +61,7 @@ var port = new SerialPort('com6');
     });
 
     module.exports=router;
+
+
+
+
