@@ -3,7 +3,7 @@ var router = express.Router();
 var PostModel = require('../models/posts');
 // var CommentModel = require('../models/comments');
 var SerialPort = require('serialport');  //引入模块
-var port = new SerialPort('com4');
+var port = new SerialPort('com5');
 
     port.on('open', function() {
         port.write('main screen turn on', function(err) {
@@ -13,13 +13,7 @@ var port = new SerialPort('com4');
             // console.log('message written');
 
             port.on('data',function(data){
-               datapool.push(data.toString('hex',5,7)) ;
-               //  var c = data.toString('hex',5,7);
-
-                // console.log(c);
-               // res.redirect('/posts');
-               console.log(datapool);
-               // console.log(data);
+               datapool.push(data.toString('hex')) ;
            });
 
         });
@@ -29,20 +23,17 @@ var port = new SerialPort('com4');
      port.on('error', function(err) {
          console.log('Error: ', err.message);
      })
-      // console.log(datapool);
-
 
      var datapool=[];
      var datapool1=function(){
          var data=datapool.toString();
          datapool = [];
-         return data;
+         return data.replace(/,/g,'').substring(10,14);
      };
-// console.log(datapool1());
-
 
     router.get('/', function(req, res, next) {
         var keyword = datapool1();
+        console.log(typeof (datapool1()));
         console.log(keyword);
         Promise.all([
             PostModel.search(keyword),
