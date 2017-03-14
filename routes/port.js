@@ -3,7 +3,7 @@ var router = express.Router();
 var PostModel = require('../models/posts');
 // var CommentModel = require('../models/comments');
 var SerialPort = require('serialport');  //引入模块
-var port = new SerialPort('com5');
+var port = new SerialPort('com6');
 
     port.on('open', function() {
         port.write('main screen turn on', function(err) {
@@ -28,13 +28,13 @@ var port = new SerialPort('com5');
      var datapool1=function(){
          var data=datapool.toString();
          datapool = [];
-         return data.replace(/,/g,'').substring(10,14);
+         return data.replace(/,/g,'').substring(14,18);
      };
 
     router.get('/', function(req, res, next) {
         var keyword = datapool1();
-        console.log(typeof (datapool1()));
-        console.log(keyword);
+        // console.log(typeof (datapool1()));
+        // console.log(keyword);
         Promise.all([
             PostModel.search(keyword),
             PostModel.incPv(keyword)// pv 加 1

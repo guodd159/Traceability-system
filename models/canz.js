@@ -30,6 +30,17 @@ module.exports = {
     create: function create(canz) {
         return Canz.create(canz).exec();
     },
+    search: function search(czId) {
+        //var postId  = new RegExp(postId, "i");
+        if(czId) {
+            return Canz
+                .findOne({cz: {$regex: czId}})
+                // .populate({path: 'author', model: 'User'})
+                .addCreatedAt()
+                .canzToHtml()
+                .exec();
+        }
+    },
     getCanzById: function getCanzById(canzId) {
         return Canz
             .findOne({ _id: canzId })

@@ -88,7 +88,23 @@ router.post('/', checkLogin, function(req, res, next) {
         })
         .catch(next);
 });
+router.get('/search', function(req, res, next) {
+    var czId = req.query.czId;
 
+
+    CanzModel.search(czId)
+        .then(function (canz) {
+            // var canz = result[0];
+            // // console.log(canz);
+            if (!canz) {
+                throw new Error('该信不存在');
+            }
+            res.render('czjg', {
+                canz: canz
+            });
+        })
+        .catch(next);
+});
 router.get('/:canzId', function(req, res, next) {
     var canzId = req.params.canzId;
     // var cz = req.fields.cz;
@@ -98,9 +114,9 @@ router.get('/:canzId', function(req, res, next) {
     ])
         .then(function (result) {
             var canz = result[0];
-            console.log(canz);
+            // console.log(canz);
             if (!canz) {
-                throw new Error('该信息不存在');
+                throw new Error('信息不存在');
             }
             res.render('czjg', {
                 canz: canz
@@ -109,5 +125,7 @@ router.get('/:canzId', function(req, res, next) {
         })
         .catch(next);
 });
+
+
 
 module.exports=router;
