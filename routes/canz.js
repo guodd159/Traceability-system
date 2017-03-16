@@ -97,7 +97,7 @@ router.get('/search', function(req, res, next) {
             // var canz = result[0];
             // // console.log(canz);
             if (!canz) {
-                throw new Error('该信不存在');
+                throw new Error('该信息不存在');
             }
             res.render('czjg', {
                 canz: canz
@@ -116,7 +116,7 @@ router.get('/:canzId', function(req, res, next) {
             var canz = result[0];
             // console.log(canz);
             if (!canz) {
-                throw new Error('信息不存在');
+                throw new Error('不存在');
             }
             res.render('czjg', {
                 canz: canz

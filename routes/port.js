@@ -53,6 +53,3 @@ var port = new SerialPort('com6');
 
     module.exports=router;
 
-
-
-
