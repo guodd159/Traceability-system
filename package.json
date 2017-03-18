@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "heroku": "NODE_ENV=production node --harmony index"
+    "heroku": " supervisor --harmony index"
   },
   "author": "",
   "license": "ISC",
