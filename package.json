@@ -1,10 +1,11 @@
 {
-  "name": "无线RFID太阳能电池可溯源系统",
+  "name": "traceability",
   "version": "1.0.0",
-  "description": "欢迎光临！",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "heroku": "NODE_ENV=production node --harmony index"
   },
   "author": "",
   "license": "ISC",
