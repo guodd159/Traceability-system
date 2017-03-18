@@ -1,1 +1,1 @@
-web: cross-env NODE_ENV=production supervisor index
+web: node index.js
