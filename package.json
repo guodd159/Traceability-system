@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku": "cross-env NODE_ENV=production node index"
+    "heroku": "cross-env NODE_ENV=production supervisor index"
   },
   "author": "",
   "license": "ISC",
