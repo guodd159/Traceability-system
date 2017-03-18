@@ -1,1 +1,1 @@
-web: npm run heroku
+web: cross-env NODE_ENV=production supervisor index
