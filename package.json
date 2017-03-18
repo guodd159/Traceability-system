@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "heroku": "NODE_ENV=production supervisor --harmony index"
+    "heroku": "cross-env NODE_ENV=production supervisor --harmony index"
   },
   "author": "",
   "license": "ISC",
@@ -25,5 +25,8 @@
     "sha1": "^1.1.1",
     "winston": "^2.3.0",
     "serialport": "^4.0.7"
+  },
+  "devDependencies": {
+    "cross-env": "^3.2.4"
   }
 }
