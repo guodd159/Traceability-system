@@ -1,6 +1,5 @@
 module.exports = {
 
-
     port: 2006,
     session: {
         secret: 'traceability',
