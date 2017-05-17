@@ -19,12 +19,12 @@ var checkLogin = require('../middlewares/check').checkLogin;
 // });
 
 
-router.get('/canzs', function(req, res, next) {
+router.get('/canzs', function (req, res, next) {
     var author = req.query.author;
     var page = parseInt(req.query.p) || 1;
     Promise.all([
         CanzModel.total(author),// 获取信息总数
-        CanzModel.getCanzs(author,page)// 获取该页信息
+        CanzModel.getCanzs(author, page)// 获取该页信息
     ])
         .then(function (result) {
             var num = result[0];
@@ -44,12 +44,12 @@ router.get('/canzs', function(req, res, next) {
 
 });
 
-router.get('/', checkLogin, function(req, res, next) {
+router.get('/', checkLogin, function (req, res, next) {
     res.render('cz');
 });
 
 
-router.post('/', checkLogin, function(req, res, next) {
+router.post('/', checkLogin, function (req, res, next) {
     var cz = req.fields.cz;
     var cl = req.fields.cl;
     var bl = req.fields.bl;
@@ -88,7 +88,7 @@ router.post('/', checkLogin, function(req, res, next) {
         })
         .catch(next);
 });
-router.get('/search', function(req, res, next) {
+router.get('/search', function (req, res, next) {
     var czId = req.query.czId;
 
 
@@ -105,7 +105,7 @@ router.get('/search', function(req, res, next) {
         })
         .catch(next);
 });
-router.get('/:canzId', function(req, res, next) {
+router.get('/:canzId', function (req, res, next) {
     var canzId = req.params.canzId;
     // var cz = req.fields.cz;
 
@@ -128,4 +128,4 @@ router.get('/:canzId', function(req, res, next) {
 
 
 
-module.exports=router;
+module.exports = router;

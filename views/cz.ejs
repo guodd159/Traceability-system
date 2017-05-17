@@ -1,39 +1,45 @@
 <%- include('header') %>
-<%- include('daohang') %>
+    <%- include('daohang') %>
 
-<div class="canza">
-    <form class="" method="post"  >
-<table class="table">
-    <caption><input placeholder="材料1" type="text" name="cz"></caption>
-    <thead>
-    <tr>
-        <th>材料</th>
-        <th>比例</th>
-        <th>产地</th></tr>
-    </thead>
-    <tbody>
-    <tr class="active">
-        <td><div class="field required"><input placeholder="材料1" type="text" name="cl"></div></td>
-        <td><input placeholder="" type="text" name="bl"></td>
-        <td><input placeholder="" type="text" name="cd"></td>
+        <div class="canza">
+            <form class="" method="post">
+                <table class="table">
+                    <caption><input placeholder="材料1" type="text" name="cz"></caption>
+                    <thead>
+                        <tr>
+                            <th>材料</th>
+                            <th>比例</th>
+                            <th>产地</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="active">
+                            <td>
+                                <div class="field required"><input placeholder="材料1" type="text" name="cl"></div>
+                            </td>
+                            <td><input placeholder="" type="text" name="bl"></td>
+                            <td><input placeholder="" type="text" name="cd"></td>
 
-    </tr>
+                        </tr>
 
-    <tr class="success">
-        <td><input placeholder="材料2" type="text" name="cl1"></td>
-        <td><input placeholder="" type="text" name="bl1"></td>
-        <td><input placeholder="" type="text" name="cd1"></td></tr>
-    <tr class="warning">
-        <td><input placeholder="材料3" type="text" name="cl2"></td>
-        <td><input placeholder="" type="text" name="bl2"></td>
-        <td><input placeholder="" type="text" name="cd2"></td></tr>
-    <tr class="danger">
-        <td><input placeholder="材料4" type="text" name="cl3"></td>
-        <td><input placeholder="" type="text" name="bl3"></td>
-        <td><input placeholder="" type="text" name="cd3"></td></tr>
-    </tbody>
-</table>
-        <div><input type="submit" class="ui button" value="存储"></div>
-    </form>
-</div>
-<%- include('footer') %>
+                        <tr class="success">
+                            <td><input placeholder="材料2" type="text" name="cl1"></td>
+                            <td><input placeholder="" type="text" name="bl1"></td>
+                            <td><input placeholder="" type="text" name="cd1"></td>
+                        </tr>
+                        <tr class="warning">
+                            <td><input placeholder="材料3" type="text" name="cl2"></td>
+                            <td><input placeholder="" type="text" name="bl2"></td>
+                            <td><input placeholder="" type="text" name="cd2"></td>
+                        </tr>
+                        <tr class="danger">
+                            <td><input placeholder="材料4" type="text" name="cl3"></td>
+                            <td><input placeholder="" type="text" name="bl3"></td>
+                            <td><input placeholder="" type="text" name="cd3"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div><input type="submit" class="ui button" value="存储"></div>
+            </form>
+        </div>
+        <%- include('footer') %>

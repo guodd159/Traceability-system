@@ -15,7 +15,7 @@ module.exports = {
       .addCreatedAt()
       .exec();
   },
-  updatePasswordByName: function updatePasswordByName(name,data){
-      return User.update({name: name}, { $set: data }).exec();
+  updatePasswordByName: function updatePasswordByName(name, data) {
+    return User.update({ name: name }, { $set: data }).exec();
   }
 };

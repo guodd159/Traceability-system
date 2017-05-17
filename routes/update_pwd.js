@@ -5,11 +5,11 @@ var UserModel = require('../models/users');
 var checkLogin = require('../middlewares/check').checkLogin;
 
 // GET /edit
-router.get('/', checkLogin, function(req, res, next) {
+router.get('/', checkLogin, function (req, res, next) {
     res.render('update_pwd');
 });
 
-router.post('/', checkLogin, function(req, res, next) {
+router.post('/', checkLogin, function (req, res, next) {
     // var name = req.fields.name1;
     var name = req.session.user.name;
     var oldpassword = req.fields.oldpassword;
@@ -53,7 +53,7 @@ router.post('/', checkLogin, function(req, res, next) {
             // res.redirect('/posts');
         })
         .catch(next);
-    UserModel.updatePasswordByName(name,{password: newpassword})
+    UserModel.updatePasswordByName(name, { password: newpassword })
         .then(function () {
             req.flash('success', '密码修改成功');
             // 编辑成功后跳转到上一页

@@ -1,12 +1,12 @@
 <%- include('header') %>
-<%- include('daohang') %>
-<%- include('search') %>
-<br><br><br><br><br><br>
-<% posts.forEach(function (post) { %>
-  <%- include('components/post-content', { post: post }) %>
-<% }) %>
+  <%- include('daohang') %>
+    <%- include('search') %>
+      <br><br><br><br><br><br>
+      <% posts.forEach(function (post) { %>
+        <%- include('components/post-content', { post: post }) %>
+          <% }) %>
 
-<br><br>
-<%- include('pagging') %>
+            <br><br>
+            <%- include('pagging') %>
 
-<%- include('footer') %>
+              <%- include('footer') %>

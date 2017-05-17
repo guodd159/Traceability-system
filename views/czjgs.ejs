@@ -1,6 +1,6 @@
 <%- include('header') %>
-<%- include('daohang') %>
-<span class="search">
+    <%- include('daohang') %>
+        <span class="search">
         <form action="/canz/search" method="GET">
             <div class="ui large icon input">
             <input type="text" name="czId" placeholder="搜索 ...">
@@ -8,9 +8,9 @@
             </div>
         </form>
 </span>
-<% canzs.forEach(function (canz) { %>
-<%- include('canz', { canz: canz }) %>
-<% }) %>
-<br><br>
-<%- include('pagging') %>
-<%- include('footer') %>
+        <% canzs.forEach(function (canz) { %>
+            <%- include('canz', { canz: canz }) %>
+                <% }) %>
+                    <br><br>
+                    <%- include('pagging') %>
+                        <%- include('footer') %>

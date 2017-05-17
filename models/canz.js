@@ -32,9 +32,9 @@ module.exports = {
     },
     search: function search(czId) {
         //var postId  = new RegExp(postId, "i");
-        if(czId) {
+        if (czId) {
             return Canz
-                .findOne({cz: {$regex: czId}})
+                .findOne({ cz: { $regex: czId } })
                 // .populate({path: 'author', model: 'User'})
                 .addCreatedAt()
                 .canzToHtml()
@@ -55,7 +55,7 @@ module.exports = {
             query.author = author;
         }
         return Canz
-            .find(query, {skip: (page-1)*3, limit: 3})
+            .find(query, { skip: (page - 1) * 3, limit: 3 })
             .populate({ path: 'author', model: 'User' })
             .sort({ _id: -1 })
             .addCreatedAt()

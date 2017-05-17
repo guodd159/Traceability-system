@@ -1,27 +1,27 @@
 <%- include('header') %>
-<%- include('daohang') %>
-<div class="loginmodule">
-<div class="login">
+  <%- include('daohang') %>
+    <div class="loginmodule">
+      <div class="login">
 
-<!--<div class="ui grid">-->
+        <!--<div class="ui grid">-->
 
-  <div class="ten wide column">
+        <div class="ten wide column">
 
-    <form class="ui form segment" method="post">
-      <div class="field required">
-        <label>用户名</label>
-        <input placeholder="用户名" type="text" name="name">
+          <form class="ui form segment" method="post">
+            <div class="field required">
+              <label>用户名</label>
+              <input placeholder="用户名" type="text" name="name">
+            </div>
+            <div class="field required">
+              <label>密码</label>
+              <input placeholder="密码" type="password" name="password">
+            </div>
+            <input type="submit" class="ui button fluid" value="登录">
+          </form>
+
+        </div>
+        <!--</div>-->
+
       </div>
-      <div class="field required">
-        <label>密码</label>
-        <input placeholder="密码" type="password" name="password">
-      </div>
-      <input type="submit" class="ui button fluid" value="登录">
-    </form>
-
-  </div>
-<!--</div>-->
-
-</div>
-</div>
-<%- include('footer') %>
+    </div>
+    <%- include('footer') %>

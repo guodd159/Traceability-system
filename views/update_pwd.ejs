@@ -1,38 +1,36 @@
 <%- include('header') %>
-<%- include('daohang') %>
-<div class="luru">
-<div class="ui grid">
-    <div class="four wide column">
-        <a class="avatar"
-           href="/posts?author=<%= user._id %>"
-           data-title="<%= user.name %> | <%= ({m: '男', f: '女', x: '保密'})[user.gender] %>"
-           data-content="<%= user.bio %>">
+    <%- include('daohang') %>
+        <div class="luru">
+            <div class="ui grid">
+                <div class="four wide column">
+                    <a class="avatar" href="/posts?author=<%= user._id %>" data-title="<%= user.name %> | <%= ({m: '男', f: '女', x: '保密'})[user.gender] %>"
+                        data-content="<%= user.bio %>">
             <img class="avatar" src="/img/<%= user.avatar %>">
         </a>
-    </div>
-    <div class="eight wide column">
-    <div>
-        <form class="ui form segment" method="post" enctype="multipart/form-data">
-            <!--<div class="field required">-->
-            <!--<label>用户名</label>-->
-            <!--<input placeholder="用户名" type="text" name="name1">-->
-            <!--</div>-->
-            <div class="field required">
-                <label>旧密码</label>
-                <input placeholder="旧密码" type="password" name="oldpassword">
+                </div>
+                <div class="eight wide column">
+                    <div>
+                        <form class="ui form segment" method="post" enctype="multipart/form-data">
+                            <!--<div class="field required">-->
+                            <!--<label>用户名</label>-->
+                            <!--<input placeholder="用户名" type="text" name="name1">-->
+                            <!--</div>-->
+                            <div class="field required">
+                                <label>旧密码</label>
+                                <input placeholder="旧密码" type="password" name="oldpassword">
+                            </div>
+                            <div class="field required">
+                                <label>新密码</label>
+                                <input placeholder="新密码" type="password" name="newpassword">
+                            </div>
+                            <div class="field required">
+                                <label>确认新密码</label>
+                                <input placeholder="确认新密码" type="password" name="renewpassword">
+                            </div>
+                            <input type="submit" class="ui button fluid" value="保存">
+                    </div>
+                    </form>
+                </div>
             </div>
-            <div class="field required">
-                <label>新密码</label>
-                <input placeholder="新密码" type="password" name="newpassword">
-            </div>
-            <div class="field required">
-                <label>确认新密码</label>
-                <input placeholder="确认新密码" type="password" name="renewpassword">
-            </div>
-            <input type="submit" class="ui button fluid" value="保存">
-    </div>
-    </form>
-</div>
-</div>
 
-<%- include('footer') %>
+            <%- include('footer') %>

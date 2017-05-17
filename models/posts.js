@@ -32,14 +32,14 @@ module.exports = {
   //搜索信息
   search: function search(postId) {
     //var postId  = new RegExp(postId, "i");
-      if(postId) {
-          return Post
-              .findOne({title: {$regex: postId}})
-              .populate({path: 'author', model: 'User'})
-              .addCreatedAt()
-              .contentToHtml()
-              .exec();
-      }
+    if (postId) {
+      return Post
+        .findOne({ title: { $regex: postId } })
+        .populate({ path: 'author', model: 'User' })
+        .addCreatedAt()
+        .contentToHtml()
+        .exec();
+    }
   },
 
   getPostById: function getPostById(postId) {
@@ -55,7 +55,7 @@ module.exports = {
   total: function total(author) {
     var query = {};
     if (author) {
-        query.author = author;
+      query.author = author;
     }
     return Post
       .count(query)
@@ -70,7 +70,7 @@ module.exports = {
     }
     return Post
 
-      .find(query, {skip: (page-1)*3, limit: 3})
+      .find(query, { skip: (page - 1) * 3, limit: 3 })
       .populate({ path: 'author', model: 'User' })
       .sort({ _id: -1 })
       .addCreatedAt()
@@ -86,20 +86,20 @@ module.exports = {
   },
 
 
-getRawPostById: function getRawPostById(postId) {
-  return Post
-    .findOne({ _id: postId })
-    .populate({ path: 'author', model: 'User' })
-    .exec();
-},
+  getRawPostById: function getRawPostById(postId) {
+    return Post
+      .findOne({ _id: postId })
+      .populate({ path: 'author', model: 'User' })
+      .exec();
+  },
 
 
-updatePostById: function updatePostById(postId, author, data) {
-  return Post.update({ author: author, _id: postId }, { $set: data }).exec();
-},
+  updatePostById: function updatePostById(postId, author, data) {
+    return Post.update({ author: author, _id: postId }, { $set: data }).exec();
+  },
 
 
-delPostById: function delPostById(postId, author) {
-  return Post.remove({ author: author, _id: postId}).exec();
-}
+  delPostById: function delPostById(postId, author) {
+    return Post.remove({ author: author, _id: postId }).exec();
+  }
 };
