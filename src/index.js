@@ -5,18 +5,18 @@ var MongoStore = require('connect-mongo')(session);
 var flash = require('connect-flash');
 var config = require('config-lite');
 var routes = require('./routes');
-var pkg = require('./package');
+var pkg = require('../package');
 var winston = require('winston');
 var expressWinston = require('express-winston');
 var app = express();
 
 // 设置模板目录
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '../views'));
 // 设置模板引擎为 ejs
 app.set('view engine', 'ejs');
 
 // 设置静态文件目录
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '.././public')));
 // session 中间件
 app.use(session({
   name: config.session.key,// 设置 cookie 中保存 session id 的字段名称
@@ -35,7 +35,7 @@ app.use(flash());
 
 // 处理表单及文件上传的中间件
 app.use(require('express-formidable')({
-  uploadDir: path.join(__dirname, 'public/img'),// 上传文件目录
+  uploadDir: path.join(__dirname, '.././public/img'),// 上传文件目录
   keepExtensions: true// 保留后缀
 }));
 

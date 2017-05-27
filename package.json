@@ -5,11 +5,59 @@
   "main": "index.js",
   "scripts": {
     "heroku": "cross-env NODE_ENV=production supervisor index",
-    "start":"supervisor index"
+   
+     "dev": "nodemon -w src --exec \"babel-node src --presets es2017\"",
+    "build": "babel src -s -D -d dist --presets es2017,node",
+    "start": "node dist",
+    "prestart": "npm run -s build",
+    "test": "eslint src"
   },
   "author": "",
   "license": "ISC",
+   "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
   "dependencies": {
+    "ali-push": "",
+    "async": "",
+    "async-file": "",
+    "body-parser": "",
+    "crypto": "",
+    "csprng": "",
+    "config-lite": "",
+    "connect-mongo": "",     
+    "express-session": "",
+    "ejs": "",
+    "express": "",
+    "http2": "",
+    "mv": "",
+    "mkdirp": "",
+    "mongoose": "",
+    "multiparty": "",
+    "qr-image": "",
+    "randomstring": "",
+    "request": "",
+    "send": "^0.15.1",
+    "sha": "",
+    "spdy": "",
+    "underscore": "",
+    "weixin-pay": "",
+    "xml2js": "",
+    "sharp":"",
+    "aliyun-sdk":"",
+    "ali-mns":"",
     "config-lite": "^1.5.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^1.3.2",
@@ -27,6 +75,12 @@
     "serialport": "^4.0.7"
   },
   "devDependencies": {
-    "cross-env": "^3.2.4"
+    "cross-env": "^3.2.4",
+    "babel-cli": "",
+    "babel-core": "",
+    "babel-preset-es2017": "",
+    "babel-preset-node": "",
+    "eslint": "",
+    "nodemon": ""
   }
 }
